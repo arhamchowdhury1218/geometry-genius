@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GeometryGem</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="m-10">
+    <header></header>
+
+
+
+    <main>
+      <!-- Shape containers -->
+      <div class="flex flex-col lg:flex-row">
+
+        <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- Triangle shape -->
+            <div class="card card-compact w-96 bg-base-100 shadow-xl">
+              <figure>
+                <img class="mt-4" src="./images/triangle.png" alt="Triangle" />
+              </figure>
+              <div class="card-body">
+                <h2 class="text-center text-4xl">Triangle</h2>
+                <p class="text-3xl text-center">Area = 0.5 X l X h</p>
+    
+                <!-- Input boxes -->
+                <div class="flex mt-4 justify-center items-center">
+                  <input type="text" class="text-center w-20 h-10 border-2 border-black rounded-sm" id="b-triangle" placeholder="b" />
+                  <span class="ml-2 mr-4">cm</span>
+                  <input type="text" class="text-center w-20 h-10 border-2 border-black rounded-sm" placeholder="h" id="h-triangle" />
+                  <span class="ml-2 mr-4">cm</span>
+                </div>
+    
+                <div class="flex mt-4">
+                    <p class="text-center text-4xl">Area: <span id="area-triangle"></span><span>cm<sup>2</sup><span></p> 
+                </div>
+    
+                <!-- Calculate Button -->
+                <div onclick="triangleArea()" class="card-actions justify-end mt-6">
+                  <button class="btn btn-primary w-full">Buy Now</button>
+                </div>
+              </div>
+            </div>
+            <!-- Rectangle shape -->
+            <div class="card card-compact w-96 bg-base-100 shadow-xl">
+              <figure>
+                <img class="mt-4" src="./images/rectangle.png" alt="Rectangle" />
+              </figure>
+              <div class="card-body">
+                <h2 class="text-center text-4xl">Rectangle</h2>
+                <p class="text-3xl text-center">Area = l X w</p>
+    
+                <!-- Input boxes -->
+                <div class="flex mt-4 justify-center items-center">
+                  <input type="text" class="text-center w-20 h-10 border-2 border-black rounded-sm" id="l-rectangle" placeholder="l" />
+                  <span class="ml-2 mr-4">cm</span>
+                  <input type="text" class="text-center w-20 h-10 border-2 border-black rounded-sm" placeholder="w" id="w-rectangle" />
+                  <span class="ml-2 mr-4">cm</span>
+                </div>
+    
+                <div class="flex mt-4">
+                    <p class="text-center text-4xl">Area: <span id="area-rectangle"></span><span>cm<sup>2</sup><span></p> 
+                </div>
+    
+                <!-- Calculate Button -->
+                <div onclick="rectangleArea()" class="card-actions justify-end mt-6">
+                  <button class="btn btn-primary w-full">Calculate</button>
+                </div>
+              </div>
+            </div>
+            <!-- Parallelogram shape -->
+            <div class="card card-compact w-96 bg-base-100 shadow-xl">
+              <figure>
+                <img class="mt-4" src="./images/parallelogram.png" alt="Triangle" />
+              </figure>
+              <div class="card-body">
+                <h2 class="text-center text-4xl">Parallelogram</h2>
+                <p class="text-3xl text-center">Area = b X h</p>
+    
+                <!-- Input boxes -->
+                <div class="flex mt-4 justify-center items-center">
+                  <input type="text" class="text-center w-20 h-10 border-2 border-black rounded-sm" id="b-triangle" placeholder="b" />
+                  <span class="ml-2 mr-4">cm</span>
+                  <input type="text" class="text-center w-20 h-10 border-2 border-black rounded-sm" placeholder="h" id="h-triangle" />
+                  <span class="ml-2 mr-4">cm</span>
+                </div>
+    
+                <div class="flex mt-4">
+                    <p class="text-center text-4xl">Area: <span id="area-triangle"></span><span>cm<sup>2</sup><span></p> 
+                </div>
+    
+                <!-- Calculate Button -->
+                <div onclick="triangleArea()" class="card-actions justify-end mt-6">
+                  <button class="btn btn-primary w-full">Buy Now</button>
+                </div>
+              </div>
+            </div>
+            <!-- Rhombus shape -->
+            <div class="card card-compact w-96 bg-base-100 shadow-xl">
+              <figure>
+                <img class="mt-4" src="./images/rhombus.png" alt="Triangle" />
+              </figure>
+              <div class="card-body">
+                <h2 class="text-center text-4xl">Rhombus</h2>
+                <p class="text-3xl text-center">Area = 0.5 X d<sub>1</sub> X d<sub>2</sub></p>
+    
+                <!-- Input boxes -->
+                <div class="flex mt-4 justify-center items-center">
+                  <input type="text" class="text-center w-20 h-10 border-2 border-black rounded-sm" id="b-triangle" placeholder="b" />
+                  <span class="ml-2 mr-4">cm</span>
+                  <input type="text" class="text-center w-20 h-10 border-2 border-black rounded-sm" placeholder="h" id="h-triangle" />
+                  <span class="ml-2 mr-4">cm</span>
+                </div>
+    
+                <div class="flex mt-4">
+                    <p class="text-center text-4xl">Area: <span id="area-triangle"></span><span>cm<sup>2</sup><span></p> 
+                </div>
+    
+                <!-- Calculate Button -->
+                <div onclick="triangleArea()" class="card-actions justify-end mt-6">
+                  <button class="btn btn-primary w-full">Buy Now</button>
+                </div>
+              </div>
+            </div>
+            <!-- Pentagonshape -->
+            <div class="card card-compact w-96 bg-base-100 shadow-xl">
+              <figure>
+                <img class="mt-4" src="./images/pentagon.png" alt="Triangle" />
+              </figure>
+              <div class="card-body">
+                <h2 class="text-center text-4xl">Pentagon</h2>
+                <p class="text-3xl text-center">Area = 0.5 X p X b</p>
+    
+                <!-- Input boxes -->
+                <div class="flex mt-4 justify-center items-center">
+                  <input type="text" class="text-center w-20 h-10 border-2 border-black rounded-sm" id="b-triangle" placeholder="b" />
+                  <span class="ml-2 mr-4">cm</span>
+                  <input type="text" class="text-center w-20 h-10 border-2 border-black rounded-sm" placeholder="h" id="h-triangle" />
+                  <span class="ml-2 mr-4">cm</span>
+                </div>
+    
+                <div class="flex mt-4">
+                    <p class="text-center text-4xl">Area: <span id="area-triangle"></span><span>cm<sup>2</sup><span></p> 
+                </div>
+    
+                <!-- Calculate Button -->
+                <div onclick="triangleArea()" class="card-actions justify-end mt-6">
+                  <button class="btn btn-primary w-full">Buy Now</button>
+                </div>
+              </div>
+            </div>
+            <!-- Ellipse shape -->
+            <div class="card card-compact w-96 bg-base-100 shadow-xl">
+              <figure>
+                <img class="mt-4" src="./images/ellipse.png" alt="Triangle" />
+              </figure>
+              <div class="card-body">
+                <h2 class="text-center text-4xl">Triangle</h2>
+                <p class="text-3xl text-center">Area = πab</p>
+    
+                <!-- Input boxes -->
+                <div class="flex mt-4 justify-center items-center">
+                  <input type="text" class="text-center w-20 h-10 border-2 border-black rounded-sm" id="b-triangle" placeholder="b" />
+                  <span class="ml-2 mr-4">cm</span>
+                  <input type="text" class="text-center w-20 h-10 border-2 border-black rounded-sm" placeholder="h" id="h-triangle" />
+                  <span class="ml-2 mr-4">cm</span>
+                </div>
+    
+                <div class="flex mt-4">
+                    <p class="text-center text-4xl">Area: <span id="area-triangle"></span><span>cm<sup>2</sup><span></p> 
+                </div>
+    
+                <!-- Calculate Button -->
+                <div onclick="triangleArea()" class="card-actions justify-end mt-6">
+                  <button class="btn btn-primary w-full">Buy Now</button>
+                </div>
+              </div>
+            </div>
+
+
+            
+          </div>
+
+        <!-- CalculationBox -->
+      <div class="w-80 border-2 border-gray-700 rounded-md mt-10 lg:mt-0">
+        <h3 class="text-3xl text-center p-4">Area Calculation</h3>
+      </div>
+      </div>
+      
+
+
+    </main>
+
+    <script src="./traingle-area.js"></script>
+    <script src="./rectangle-area.js"></script>
+  </body>
+</html>
